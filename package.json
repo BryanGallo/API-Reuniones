@@ -1,0 +1,28 @@
+{
+    "name": "api-reuniones",
+    "version": "1.0.0",
+    "description": "REST API REUNIONES",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "nodemon --exec tsx src/index.ts",
+        "start": "node index.ts",
+        "clean": "rm -rf dist/",
+        "build": "npx tsc",
+        "production": "npm run build && node dist/",
+        "db:import": "node ./src/seed/seeder.ts -i",
+        "db:delete": "node ./src/seed/seeder.ts -d"
+    },
+    "author": "Bryan Gallo",
+    "license": "ISC",
+    "type": "module",
+    "devDependencies": {
+        "@types/express": "^5.0.6",
+        "nodemon": "^3.1.11",
+        "tsx": "^4.21.0",
+        "typescript": "^5.9.3"
+    },
+    "dependencies": {
+        "express": "^5.2.1"
+    }
+}
