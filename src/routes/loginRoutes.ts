@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { loginController } from "../controllers/loginController.js";
-import { loginBodyValidator, loginParamValidator, loginQueryValidator } from "../validators/loginValidator.js";
 import { validationHandler } from "../middlewares/validationHandler.js";
+import { loginBodyValidator } from "../validators/loginValidator.js";
 
 const loginRoutes = Router();
 
